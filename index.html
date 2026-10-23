@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>节气拼画</title>
+  <script type="module" crossorigin src="./assets/index-Bekb9psF.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C7Y5vgmV.css">
+</head>
+<body>
+  <main class="stage">
+    <svg id="board" class="board" tabindex="0" role="application" aria-label="宣纸" xmlns="http://www.w3.org/2000/svg"></svg>
+    <svg id="walker" class="walker" data-testid="walker" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"></svg>
+    <section class="opening" data-testid="opening">
+      <h1 class="opening-title" data-testid="opening-title"></h1>
+      <div class="cards" data-testid="season-cards" role="group" aria-label="节气"></div>
+      <div class="corner br"><button class="btn btn-text fit-br" type="button" data-testid="album-entry">画册</button></div>
+    </section>
+    <section class="omen" data-testid="omen" hidden>
+      <h1 class="season-name vertical-text" data-testid="omen-name"></h1>
+      <p class="poem vertical-text" data-testid="omen-poem"></p>
+      <p class="meta attrib vertical-text" data-testid="omen-attrib"></p>
+    </section>
+    <header class="corner tl season" data-avoid data-chrome hidden>
+      <h1 class="season-name" data-testid="season-name"></h1>
+      <p class="remain">余 <b class="num" data-testid="remain">100</b> 块</p>
+    </header>
+    <div class="corner tr" data-avoid data-chrome hidden>
+      <div class="wrap-rel">
+        <button class="icon-btn sound-btn" type="button" data-testid="sound" aria-label="声音" aria-haspopup="menu" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.2L11 6.5v11l-3.8-3H4z"/><path class="wave" d="M14.8 9.6a3.4 3.4 0 0 1 0 4.8"/><path class="wave" d="M17.3 7.2a6.8 6.8 0 0 1 0 9.6"/><path class="mute" d="M15 9.5l5 5M20 9.5l-5 5"/></svg></button>
+        <div class="popover" role="menu" aria-label="声音" data-testid="sound-popover" hidden>
+          <button class="switch-row" type="button" role="menuitemcheckbox" aria-checked="true" data-sound-key="bgm" data-testid="sound-bgm"><span>背景音乐（古琴）</span><span class="switch"></span></button>
+          <button class="switch-row" type="button" role="menuitemcheckbox" aria-checked="true" data-sound-key="sfx" data-testid="sound-sfx"><span>落笔声、流水声</span><span class="switch"></span></button>
+        </div>
+      </div>
+      <button class="seal-btn" type="button" data-testid="seal" aria-label="收笔，结束这一局"><span>收笔</span></button>
+    </div>
+    <footer class="corner bl" data-avoid data-chrome hidden>
+      <p class="hint"><kbd>滚轮</kbd> <kbd>R</kbd> <kbd>F</kbd> 旋转 · <kbd>左键</kbd> 落子 · <kbd>左键拖</kbd> <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 移画面 · <kbd>回车</kbd> 落子 · <kbd>B</kbd> 空白块</p>
+    </footer>
+    <aside class="corner br yan paper-2" aria-label="砚台" data-testid="yan" data-avoid data-chrome hidden>
+      <button class="slot blank-chip" type="button" data-testid="blank-chip" aria-pressed="false" aria-label="空白块：随时可落，不占 100 块（B）">
+        <svg id="blank" data-testid="blank" aria-hidden="true" width="40" height="35"></svg>
+        <span class="slot-label">空白 <kbd>B</kbd></span>
+      </button>
+      <div class="slot hand-slot" data-testid="hand-slot">
+        <svg id="hand" data-testid="hand" role="img" aria-label="手中这一块" width="80" height="70"></svg>
+        <span class="slot-label">手中</span>
+      </div>
+      <div class="slot">
+        <svg id="next" data-testid="next" role="img" aria-label="下一块" width="48" height="42"></svg>
+        <span class="slot-label">下一块</span>
+      </div>
+    </aside>
+    <p class="edge-hint" data-testid="edge-hint" hidden>纸边</p>
+  </main>
+</body>
+</html>
